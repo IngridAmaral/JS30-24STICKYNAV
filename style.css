@@ -25,6 +25,10 @@ body {
   transition: transform 0.5s;
 }
 
+.fixed-nav .site-wrap {
+    transform: scale(1);
+}
+
 header {
   text-align: center;
   height: 50vh;
@@ -73,9 +77,13 @@ li.logo {
   max-width: 0;
   overflow: hidden;
   background: white;
-  transition: all .5s;
+  transition: all 1s;
   font-weight: 600;
   font-size: 30px;
+}
+
+.fixed-nav li.logo { /*when the body has a .fixed-nav class*/
+    max-width: 500px; /*mus have a value, if it's auto the animation won't work*/
 }
 
 li.logo a {
